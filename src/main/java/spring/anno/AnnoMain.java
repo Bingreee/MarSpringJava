@@ -10,7 +10,12 @@ public class AnnoMain {
 		
 		Foo f = context.getBean("foo", Foo.class);
 		f.doFoo();
+		System.out.println("----------------------------------------");
 		
+		Foo smith = context.getBean("activeFoo",Foo.class);
+		smith.doFoo();
+		
+		System.out.println("----------------------------------------");
 		context.registerShutdownHook();
 
 	}
